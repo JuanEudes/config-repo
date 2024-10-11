@@ -1,2 +1,4 @@
 server:
   port: 8092
+
+mensaje: "Hola soy User-Service"
