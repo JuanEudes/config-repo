@@ -2,24 +2,18 @@ server:
   port: 8081
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/course_service_db
+    url: jdbc:mysql://localhost:3306/cibertec
     username: Yagami
     password: juan2024
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-
+  application:
+    name: course-service
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
-
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  
 management:
   endpoints:
     web:
