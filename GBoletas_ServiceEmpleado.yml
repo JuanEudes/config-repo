@@ -1,2 +1,28 @@
 server:
-  port: 9091
+  port: 9092
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/DB_GBoletas
+    username: Yagami
+    password: juan2024
+    driver-class-name: com.mysql.cj.jdbc.Driver 
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  security:
+    enabled: false
+
+logging:
+  level:
+    org.springframework.security: DEBUG
